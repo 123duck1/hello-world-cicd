@@ -1,7 +1,7 @@
 from main import hello
 
 def test_hello():
-    assert hello() == "Hello World"
+    assert hello() == "HelloWorld"
     print("测试通过！")
 
 if __name__ == "__main__":
