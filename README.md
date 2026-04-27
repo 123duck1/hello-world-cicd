@@ -2,20 +2,27 @@
 本作业的目标是为一个简单的 Hello World Python 项目，基于 GitHub Actions 搭建一条自动化 CI/CD（持续集成 / 持续部署）流水线，实现代码提交后的自动拉取、环境配置、单元测试和程序运行，验证自动化流程的可行性。
 二、项目结构
 项目目录结构如下：
+
 hello-world-cicd/
 ├── .github/
+
 │   └── workflows/
-│       └── ci.yml       # GitHub Actions 流水线配置文件
+
+    │           └── ci.yml       # GitHub Actions 流水线配置文件
+
 ├── main.py               # 主程序（Hello World 示例）
+
 └── test_main.py          # 单元测试文件
 
 三、核心代码说明
 1. 主程序 main.py
 实现了一个简单的 hello() 函数，返回指定字符串，并在主程序中打印输出。
 def hello():
+
     return "Hello World"
 
 if __name__ == "__main__":
+   
     print(hello())
 
 2. 单元测试文件 test_main.py
@@ -23,10 +30,13 @@ if __name__ == "__main__":
 from main import hello
 
 def test_hello():
+   
     assert hello() == "Hello World"
+   
     print("测试通过！")
 
 if __name__ == "__main__":
+   
     test_hello()
 
   CI/CD 流水线配置 .github/workflows/ci.yml
